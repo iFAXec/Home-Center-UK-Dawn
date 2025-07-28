@@ -1,0 +1,169 @@
+{% style %}
+.luxury-banner {
+          position: relative;
+            width: 100%;
+            height: 70vh;
+            overflow: hidden;
+            font-family: Arial, sans-serif;
+}
+    
+        .luxury-banner #bannerVideo {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    
+        .luxury-banner .overlay {
+            position: absolute;
+            inset: 0;
+            background-color: rgba(0, 0, 0, 0.4);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+        }
+    
+        .luxury-banner h1 {
+            margin-bottom: 1rem;
+            color: white !important;
+            font-size: 48px !important;
+        }
+    
+        .luxury-banner p {
+            max-width: 40rem;
+            margin-bottom: 2rem;
+            font-size: 20px !important;
+        }
+    
+        .luxury-banner .cta-button {
+            background-color: black;
+            border: none;
+            padding: 1.75rem 4.50rem;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            color: white;
+        }
+    
+        .luxury-banner .cta-button:hover {
+            background-color: #f0f0f0;
+        }
+    
+        .luxury-banner .mute-button {
+            position: absolute;
+            bottom: 1rem;
+            right: 1rem;
+            background-color: rgba(255, 255, 255, 0.5);
+            border: none;
+            border-radius: 50%;
+            padding: 0.5rem;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+    
+        .luxury-banner .mute-button:hover {
+            background-color: rgba(255, 255, 255, 0.75);
+        }
+    
+        .luxury-banner .mute-icon,
+        .luxury-banner .unmute-icon {
+            width: 1.5rem;
+            height: 1.5rem;
+        }
+    
+        .luxury-banner .hidden {
+            display: none;
+        }
+    
+        @media (max-width: 768px) {
+            .luxury-banner h1 {
+                font-size: 32px !important;
+            }
+    
+            .luxury-banner p {
+                font-size: 16px !important;
+            }
+        }
+{% endstyle %}
+
+
+
+<div class="luxury-banner" >
+    <h1>{{section.settings.banner-video | video_tag: autoplay:true, muted:true, loop:true, id:"BannerVideo" }}</h1>
+        <div class="overlay" >
+            <h3 style="color:{{section.settings.banner-h1-color}}"  >{{section.settings.banner-h1-text}}</h3>
+            <p style="color:{{section.settings.banner-p-color}}" >{{section.settings.banner-p-text}}</p>
+            <a href="#">
+                <button class="cta-button" style="background-color: {{section.settings.cta-button-color}};">
+                    {{section.settings.cta-button-text}}
+                </button>
+            </a>
+        </div>
+</div>
+
+{% schema %}
+{
+    "name": "my-new-section",
+    "settings": [
+        {
+            "type": "video",
+            "id": "banner-video",
+            "label": "Banner Video"
+        },        
+        {
+            "type": "text",
+            "id": "banner-h1-text",
+            "label": "Heading Text",
+            "default":"New Collection"
+            
+        },        
+        {
+            "type": "color",
+            "id": "banner-h1-color",
+            "label": "Heading Text",
+            "default":"#fff"
+            
+        },        
+        {
+            "type": "text",
+            "id": "banner-p-text",
+            "label": "Paragraph Text",
+            "default":"Experience the Magic"
+            
+        },        
+        {
+            "type": "color",
+            "id": "banner-p-color",
+            "label": "Paragraph Text",
+            "default":"#fff"
+            
+        },        
+        {
+            "type": "text",
+            "id": "cta-button-text",
+            "label": "Button Text",
+            "default":"Shop Now"
+            
+        },        
+        {
+            "type": "color",
+            "id": "cta-button-color",
+            "label": "Button Color",
+            "default":"#000000"
+
+            
+        }        
+        ],
+        "presets": [
+          {
+            "name": "my-new-section"
+            
+          }
+        ]
+}
+{% endschema %}

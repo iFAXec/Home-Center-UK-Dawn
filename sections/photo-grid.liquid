@@ -1,0 +1,44 @@
+{{"photo-grid.css" | asset_url |  stylesheet_tag}}
+
+<div class="grid-container" >
+    {% for block in section.blocks %}    
+        <div class="product-grid" id="nike-product-grid-container">
+            <a href="#" class="product-item">
+                <img src="{{block.settings.product-image |  image_url: width: 400 }}" alt="product-image" class="product-image first-image">
+                <div class="product-overlay"></div>
+                <div class="product-info">
+                    <h3 class="product-title">Title</h3>
+                    <button class="show-now-btn">Shop Now</button>
+                </div>
+            </a>
+        </div>
+    {% endfor %}
+</div>
+
+{% schema %}
+{
+    "name": "Photo Grid",
+        "blocks": [
+          {
+            "name": "block Image",
+            "type": "Image",
+            "settings": [
+                {
+                  "type": "image_picker",
+                  "id": "product-image",
+                  "label": "Image Selector"
+                }
+            ]
+          }
+        ],
+    
+    "presets": [
+      {
+        "name": "Photo Grid",
+        "settings": {
+          
+        }
+      }
+    ]
+}
+{% endschema %}

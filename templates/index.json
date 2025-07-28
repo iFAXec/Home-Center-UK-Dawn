@@ -22,6 +22,43 @@
         "cta-button-color": "#f40c0c"
       }
     },
+    "photo_grid_ei4XrT": {
+      "type": "photo-grid",
+      "blocks": {
+        "image_nDAN3j": {
+          "type": "Image",
+          "settings": {
+            "product-image": "shopify://shop_images/succulent-in-handmade-mug.jpg"
+          }
+        },
+        "image_JbAehd": {
+          "type": "Image",
+          "settings": {
+            "product-image": "shopify://shop_images/plants-and-table-decorations.jpg"
+          }
+        },
+        "image_qdtH8x": {
+          "type": "Image",
+          "settings": {
+            "product-image": "shopify://shop_images/open-plan-kitchen-with-wooden-fixtures.jpg"
+          }
+        },
+        "image_qDgtnT": {
+          "type": "Image",
+          "settings": {
+            "product-image": "shopify://shop_images/blush-pink-stationary-and-decor.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "image_nDAN3j",
+        "image_JbAehd",
+        "image_qdtH8x",
+        "image_qDgtnT"
+      ],
+      "name": "Photo Grid",
+      "settings": {}
+    },
     "featured_collection": {
       "type": "featured-collection",
       "settings": {
@@ -51,5 +88,5 @@
       }
     }
   },
-  "order": ["new_section_XWKDhV", "featured_collection"]
+  "order": ["new_section_XWKDhV", "photo_grid_ei4XrT", "featured_collection"]
 }

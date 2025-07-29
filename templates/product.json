@@ -9,6 +9,25 @@
  */
 {
   "sections": {
+    "custom_liquid_9FCpi7": {
+      "type": "custom-liquid",
+      "blocks": {
+        "best_seller_WE8dRA": {
+          "type": "best-seller",
+          "name": "Best Seller",
+          "settings": {},
+          "blocks": {}
+        }
+      },
+      "block_order": ["best_seller_WE8dRA"],
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
     "main": {
       "type": "main-product",
       "blocks": {
@@ -99,9 +118,16 @@
         "padding_top": 36,
         "padding_bottom": 28
       }
+    },
+    "sample_product_CgHw3p": {
+      "type": "sample-product",
+      "name": "Sample Product",
+      "settings": {}
     }
   },
   "order": [
+    "sample_product_CgHw3p",
+    "custom_liquid_9FCpi7",
     "main",
     "related-products"
   ]

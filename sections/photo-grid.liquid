@@ -3,12 +3,12 @@
 <div class="grid-container" >
     {% for block in section.blocks %}    
         <div class="product-grid" id="nike-product-grid-container">
-            <a href="#" class="product-item">
+            <a href="/collections/{{block.settings.collection-link}}" class="product-item">
                 <img src="{{block.settings.product-image |  image_url: width: 400 }}" alt="product-image" class="product-image first-image">
                 <div class="product-overlay"></div>
                 <div class="product-info">
-                    <h3 class="product-title">Title</h3>
-                    <button class="show-now-btn">Shop Now</button>
+                    <h3 class="product-title" style="color:{{block.settings.text-color}}" >{{block.settings.product-text}}</h3>
+                    <button class="show-now-btn" style="background-color:{{block.settings.button-color}}"  >{{block.settings.button-text}}</button>
                 </div>
             </a>
         </div>
@@ -27,7 +27,37 @@
                   "type": "image_picker",
                   "id": "product-image",
                   "label": "Image Selector"
+                },
+                {
+                  "type": "text",
+                  "id": "product-text",
+                  "label": "Product text",
+                  "default":"Enter Text Here"
+                },
+                {
+                  "type": "text",
+                  "id": "button-text",
+                  "label": "Button text",
+                  "default":"Buy Now"
+                },
+                {
+                  "type": "color",
+                  "id": "button-color",
+                  "label": "Button Color",
+                  "default":"#000000"                  
+                },
+                {
+                  "type": "color",
+                  "id": "text-color",
+                  "label": "Text Color",
+                  "default":"#000000"
+                },
+                {
+                  "type": "collection",
+                  "id": "collection-link",
+                  "label": "Collection Link"
                 }
+                
             ]
           }
         ],

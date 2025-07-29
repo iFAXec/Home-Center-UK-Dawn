@@ -28,25 +28,45 @@
         "image_nDAN3j": {
           "type": "Image",
           "settings": {
-            "product-image": "shopify://shop_images/succulent-in-handmade-mug.jpg"
+            "product-image": "shopify://shop_images/succulent-in-handmade-mug.jpg",
+            "product-text": "The Quality Mug",
+            "button-text": "Buy Now",
+            "button-color": "#f70202",
+            "text-color": "#37b433",
+            "collection-link": "pots"
           }
         },
         "image_JbAehd": {
           "type": "Image",
           "settings": {
-            "product-image": "shopify://shop_images/plants-and-table-decorations.jpg"
+            "product-image": "shopify://shop_images/plants-and-table-decorations.jpg",
+            "product-text": "Pottery",
+            "button-text": "Buy Now",
+            "button-color": "",
+            "text-color": "#ffffff",
+            "collection-link": "sofa"
           }
         },
         "image_qdtH8x": {
           "type": "Image",
           "settings": {
-            "product-image": "shopify://shop_images/open-plan-kitchen-with-wooden-fixtures.jpg"
+            "product-image": "shopify://shop_images/open-plan-kitchen-with-wooden-fixtures.jpg",
+            "product-text": "Amazing Furniture",
+            "button-text": "Buy Now",
+            "button-color": "#ff0000",
+            "text-color": "#ffffff",
+            "collection-link": "wooden-furniture"
           }
         },
         "image_qDgtnT": {
           "type": "Image",
           "settings": {
-            "product-image": "shopify://shop_images/blush-pink-stationary-and-decor.jpg"
+            "product-image": "shopify://shop_images/blush-pink-stationary-and-decor.jpg",
+            "product-text": "",
+            "button-text": "Buy Now",
+            "button-color": "",
+            "text-color": "",
+            "collection-link": ""
           }
         }
       },

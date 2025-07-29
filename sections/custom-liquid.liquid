@@ -14,14 +14,21 @@
 <div class="color-{{ section.settings.color_scheme }} gradient">
   <div class="section-{{ section.id }}-padding">
     {{ section.settings.custom_liquid }}
-  </div>
+    </div>
 </div>
+    
+{%content_for 'blocks' %}
 
 {% schema %}
 {
   "name": "t:sections.custom-liquid.name",
   "tag": "section",
   "class": "section",
+  "blocks": [
+    {
+      "type": "@theme"         
+    }
+  ],
   "settings": [
     {
       "type": "liquid",

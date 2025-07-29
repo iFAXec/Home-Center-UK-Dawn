@@ -1,0 +1,48 @@
+<style>
+    .tag {
+        display: flex;
+        align-items: center;
+        background-color: #f8d7da; /* Light red background */
+        color: #721c24; /* Dark red text */
+        padding: 10px;
+        border-radius: 5px;
+        font-family: Arial, sans-serif;
+        font-size: 14px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        max-width: 200px;
+    }
+
+    .tag .material-symbol-outlined {
+        font-size: 20px;
+        margin-right: 8px;
+    }
+
+    .tag p {
+        margin: 0;
+        font-weight: bold;
+    }
+</style>
+
+<div class="tag">
+        <span class="material-symbol-outlined">
+                sell
+        </span>
+        <p>Best Seller</p>
+</div>
+
+{% schema %}
+        {
+                "name": "Best-seller",
+                "settings": [
+                
+                ],        
+                "presets": [
+                    {
+                        "name": "Best Seller",
+                        "settings": {
+                            
+                        }
+                    }
+                ]
+        }
+{% endschema %}

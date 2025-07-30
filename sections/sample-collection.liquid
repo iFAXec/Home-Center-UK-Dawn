@@ -1,0 +1,21 @@
+<h1>{{collection.all_products_count}}</h1>
+
+{% for prod in collection.products %}
+    {{prod.title}}
+{% endfor %}
+
+{% schema %}
+    {
+        "name": "Sample-Collection",
+        "settings": [
+        
+        ],
+        "presets": [
+          {
+            "name": "Sample-Collection",
+            "settings": {
+            }
+          }
+        ]
+    }
+{% endschema %}

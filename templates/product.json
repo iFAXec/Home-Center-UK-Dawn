@@ -9,6 +9,11 @@
  */
 {
   "sections": {
+    "sample_product_CgHw3p": {
+      "type": "sample-product",
+      "name": "Sample Product",
+      "settings": {}
+    },
     "custom_liquid_9FCpi7": {
       "type": "custom-liquid",
       "blocks": {
@@ -119,13 +124,14 @@
         "padding_bottom": 28
       }
     },
-    "sample_product_CgHw3p": {
-      "type": "sample-product",
-      "name": "Sample Product",
+    "custom_contact_firm_M8xjkt": {
+      "type": "custom-contact-form",
+      "name": "Custom-Contact-Form",
       "settings": {}
     }
   },
   "order": [
+    "custom_contact_firm_M8xjkt",
     "sample_product_CgHw3p",
     "custom_liquid_9FCpi7",
     "main",

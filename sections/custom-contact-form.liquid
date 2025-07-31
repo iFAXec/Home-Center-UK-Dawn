@@ -1,0 +1,25 @@
+{% form 'contact' , attribute: 'custom-contact-form' %}
+  {{form.errors | default_errors}}
+{% if form.posted_successfully? %}
+  <h3>Form was submitted successfully1</h3>
+{% endif %}
+<label for="name">Name :
+  <input type="text" name="contact[text]" id="text" />
+</label>
+<label for="email">Email :
+  <input type="email" name="contact[email]" id="email" />
+</label>
+  <input type="submit" value="submit" />
+{% endform %}
+
+{% schema %}
+{
+    "name": "Custom Contact Form",
+    "settings": [],
+    "presets": [
+  {
+    "name": "Custom-Contact-Form"
+  }
+  ]
+}
+{% endschema %}
